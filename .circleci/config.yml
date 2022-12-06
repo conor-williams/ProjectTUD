@@ -17,7 +17,7 @@ jobs:
       - run:
           name: "Say hello2"
           command: echo "Running test"; echo "second line";
-                    echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a;
+                    echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a; sudo apt-get update;
                     sudo apt install python python-dev python3-pip ;
                     sudo pip install awscli; sudo aws s3 sync . s3://consbucket4/ --delete;
       
