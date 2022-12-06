@@ -19,8 +19,8 @@ jobs:
           command: echo "Running test"; echo "second line"; 
                     echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a; 
                     sudo apt-get update; sudo apt install python3-pip; sudo pip3 install awscli; echo "ABOUT TO AWS"; aws configure import --csv credentials.csv; 
-                    aws s3 ls; aws s3 ls s3://consbucket4; echo "S3 AWS";
-                    sudo aws s3 ls s3://consbucket4 ;
+                    echo "AFTER CONFIGURE"; aws s3 ls s3://consbucket4; echo "S3 AWS";
+                    sudo aws s3 sync . s3://consbucket4 ;
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
