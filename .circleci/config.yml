@@ -15,8 +15,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Say hello"
-          command: "echo Hello, World 2 conor!"
+          name: "Say hello2"
+          command: |
+      echo Running test
+      mkdir -p /tmp/test-results
+      make test 
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
