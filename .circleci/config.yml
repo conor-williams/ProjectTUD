@@ -18,7 +18,9 @@ jobs:
           name: "Say hello2"
           command: echo "Running test"; echo "second line"; 
                     echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a; 
-                    sudo apt-get update; sudo apt install python3-pip; sudo pip3 install awscli; echo "ABOUT TO AWS"; aws configure import --csv credentials.csv; 
+                    sudo apt-get update; sudo apt install python3-pip; sudo pip3 install awscli; echo "ABOUT TO AWS"; cat credentials.csv;
+                    aws configure;
+                    aws configure import --csv credentials.csv; 
                     echo "AFTER CONFIGURE"; aws s3 ls s3://consbucket4; echo "S3 AWS";
                     sudo aws s3 sync . s3://consbucket4 ;
       
