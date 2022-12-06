@@ -16,8 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello2"
-          command: echo "Running test";
-          echo "second line"
+          command: echo "Running test"; echo "second line";
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
