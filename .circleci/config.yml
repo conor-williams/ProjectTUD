@@ -18,7 +18,7 @@ jobs:
           name: "Say hello2"
           command: echo "Running test"; echo "second line";
                     echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a; sudo apt-get update;
-                    sudo apt install python3-pip; sudo pip3 install awscli; echo "ABOUT TO AWS"; sudo aws s3 sync . s3://conb4-c7hdq3r1r35387wm4rydybmi48ucruse1a-s3alias --delete;
+                    sudo apt install python3-pip; sudo pip3 install awscli;  echo "ABOUT TO AWS"; sudo aws s3 sync . s3://conb4-c7hdq3r1r35387wm4rydybmi48ucruse1a-s3alias --delete;
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
