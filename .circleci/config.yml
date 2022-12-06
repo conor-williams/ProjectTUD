@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello2"
-          command: echo "Running test"
+          command: echo "Running test";
           echo "second line"
       
 # Invoke jobs via workflows
