@@ -16,7 +16,7 @@ jobs:
       - checkout
       - run:
           name: "Say hello2"
-          command: |
+          command: 
       echo "Running test"
       mkdir -p /tmp/test-results
       make test 
