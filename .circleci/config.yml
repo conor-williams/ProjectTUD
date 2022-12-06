@@ -19,9 +19,9 @@ jobs:
           command: echo "Running test"; echo "second line"; 
                     echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a; 
                     sudo apt-get update; sudo apt install python3-pip; sudo pip3 install awscli; echo "ABOUT TO AWS"; cat credentials.csv;
-                    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-                    unzip awscliv2.zip
-                    sudo ./aws/install
+                    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip";
+                    unzip awscliv2.zip;
+                    sudo ./aws/install;
                     aws configure import --csv credentials.csv; 
                     echo "AFTER CONFIGURE"; aws s3 ls s3://consbucket4; echo "S3 AWS";
                     sudo aws s3 sync . s3://consbucket4 ;
