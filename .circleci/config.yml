@@ -18,8 +18,8 @@ jobs:
           name: "Say hello2"
           command: echo "Running test"; echo "second line";
                     echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a;
-                    apt install python python-dev py-pip build-base;
-                    pip install awscli; aws s3 sync . s3://consbucket4/ --delete;
+                    sudo apt install python python-dev py-pip build-base;
+                    sudo pip install awscli; sudo aws s3 sync . s3://consbucket4/ --delete;
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
