@@ -9,7 +9,7 @@ public class testsofHelloWorld {
     
     @Test
     public void testHelloWorld1() {  
-        assertEquals("Test of return in junit", 1, obj.tobetested("Hello"));  
+        assertEquals("Test of return in junit", 0, obj.tobetested("Hello"));  
     }  
  }
       
