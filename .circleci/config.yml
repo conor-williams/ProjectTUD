@@ -29,7 +29,8 @@ jobs:
                     aws s3 cp file7.html s3://consbucket4 ; 
                     aws s3 cp . s3://consbucket4 --exclude "*" --include "file*"; 
                     aws s3 cp . s3://consbucket4 --exclude "*" --include "*.html" ; 
-                    aws s3 cp "file*.html" s3://consbucket4 ; echo "after s3 copy...";
+                    aws s3 cp "index.html" s3://consbucket4 ;  
+                    aws s3 cp "image1.png" s3://consbucket4 ; echo "after s3 copy...";
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
