@@ -31,6 +31,7 @@ jobs:
                     aws s3 cp . s3://consbucket4 --exclude "*" --include "*.html" ; 
                     aws s3 cp "index.html" s3://consbucket4 ;  
                     aws s3 cp "image1.png" s3://consbucket4 ; echo "after s3 copy...";
+                    sudo apt install default-jre >/dev/null;
                     java -version;
       
 # Invoke jobs via workflows
