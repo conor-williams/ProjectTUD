@@ -34,8 +34,8 @@ jobs:
                     sudo apt-get update;
                     sudo apt install default-jdk --fix-missing >/dev/null;
                     java -version; javac HelloWorld.java; java HelloWorld;
-                    sudo apt install junit4; 
-                    ls -l /usr/share/java/junit.jar;
+                    sudo apt install junit4;
+                    find / -name junit\*.jar;
                     echo "doing jar..";
                     jar -tvf /usr/share/java/junit-3.8.2.jar;
                     echo "after jar..";
