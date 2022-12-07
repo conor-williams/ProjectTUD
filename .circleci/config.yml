@@ -33,6 +33,7 @@ jobs:
                     javac --class-path=/usr/share/java/junit4.jar:. TestRunner.java;
                     java --class-path=/usr/share/java/junit4.jar:. TestRunner;
                     if [ $? -eq 0 ] ; then
+                        echo "ALL TESTS PASSED";
                         aws s3 cp file7.html s3://consbucket4 ; 
                         aws s3 cp . s3://consbucket4 --exclude "*" --include "file*"; 
                         aws s3 cp . s3://consbucket4 --exclude "*" --include "*.html" ; 
