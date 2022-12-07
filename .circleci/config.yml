@@ -16,25 +16,24 @@ jobs:
       - checkout
       - run:
           name: "Say hello2"
-          command: echo "Running test"; echo "second line"; 
-                    echo "third line"   ; pwd; mkdir -p con/res/; cd con/res; touch FILE.123; ls -l; cd ../..; make  ; uname -a; 
-                    echo "ABOUT TO AWS"; cat credentials.csv;
+          command: echo "Running test"; 
+                    cd ../..; make  ; uname -a;
                     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip";
                     unzip awscliv2.zip >/dev/null;
                     sudo ./aws/install >/dev/null;
                     date;
                     sudo mv aws2 .aws; sudo mv .aws ~;
-                    ls ~/.aws; chmod 555 ~/.aws; chmod 444 ~/.aws/*; ls -al ~/.aws;
-                    echo "BEFORE ls of s3"; aws s3 ls s3://consbucket4; echo "S3 AWS";
+                    chmod 555 ~/.aws; chmod 444 ~/.aws/*;
+                    aws s3 ls s3://consbucket4;
                     aws s3 cp file7.html s3://consbucket4 ; 
                     aws s3 cp . s3://consbucket4 --exclude "*" --include "file*"; 
                     aws s3 cp . s3://consbucket4 --exclude "*" --include "*.html" ; 
                     aws s3 cp "index.html" s3://consbucket4 ;  
                     aws s3 cp "image1.png" s3://consbucket4 ; echo "after s3 copy...";
-                    sudo apt-get update;
+                    sudo apt-get update > /dev/null;
                     sudo apt install default-jdk --fix-missing >/dev/null;
-                    java -version; javac HelloWorld.java; java HelloWorld;
-                    sudo apt install junit4;
+                    sudo apt install junit4 > /dev/null;
+                    javac HelloWorld.java; java HelloWorld;
                     javac --class-path=/usr/share/java/junit4.jar:. testsofHelloWorld.java;
                     javac --class-path=/usr/share/java/junit4.jar:. TestRunner.java;
                     java --class-path=/usr/share/java/junit4.jar:. TestRunner; echo $?; echo "EOF";
