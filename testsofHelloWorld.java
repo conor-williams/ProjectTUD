@@ -5,7 +5,7 @@ public class testsofHelloWorld {
     HelloWorld obj = new HelloWorld();  
      
     public void testHelloWorld1() {  
-        assertEquals("Test of return in junit", 1, obj.tobetested());  
+        assertEquals("Test of return in junit", 1, obj.tobetested("Hello"));  
     }  
  }
       
