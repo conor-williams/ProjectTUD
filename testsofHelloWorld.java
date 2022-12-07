@@ -1,5 +1,8 @@
-import static junit.framework.Assert.assertEquals;  
-import junit.framework.Test;  
+//import static junit.framework.Assert.assertEquals;  
+//import junit.framework.Test;  
+import org.junit.*;
+import org.junit.Test;
+import static org.junit.Assert.*;
 public class testsofHelloWorld {  
            
     HelloWorld obj = new HelloWorld();  
