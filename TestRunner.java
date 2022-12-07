@@ -8,9 +8,11 @@ public class TestRunner {
       Result result = JUnitCore.runClasses(testsofHelloWorld.class);  
           
       for (Failure fail : result.getFailures()) {  
-         System.out.println(fail.toString());  
+         System.out.println(fail.toString());
+         exit 1;
       }  
           
-      System.out.println(result.wasSuccessful());  
+      System.out.println(result.wasSuccessful());
+      exit 0;
    }  
 }   
