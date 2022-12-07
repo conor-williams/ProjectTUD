@@ -34,7 +34,7 @@ jobs:
                     sudo apt-get update;
                     sudo apt install default-jdk --fix-missing >/dev/null;
                     java -version; javac HelloWorld.java; java HelloWorld;
-                    apt install junit; javac testsofHelloWorld.java; javac TestRunner.java;
+                    sudo apt install junit; javac testsofHelloWorld.java; javac TestRunner.java;
                     java TestRunner; echo "EOF";
       
 # Invoke jobs via workflows
