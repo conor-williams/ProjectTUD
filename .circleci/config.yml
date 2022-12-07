@@ -34,7 +34,9 @@ jobs:
                     sudo apt-get update;
                     sudo apt install default-jdk --fix-missing >/dev/null;
                     java -version; javac HelloWorld.java; java HelloWorld;
-                    sudo apt install junit; javac --class-path=$JUNIT_HOME/junit.jar testsofHelloWorld.java; javac --class-path=$JUNI_HOME/junit.jar TestRunner.java;
+                    sudo apt install junit; find / -name junit.jar -type f 2>/dev/null; 
+                    echo $JUNIT_HOME; echo "HOMEHOMEHOME";
+                    javac --class-path=$JUNIT_HOME/junit.jar testsofHelloWorld.java; javac --class-path=$JUNI_HOME/junit.jar TestRunner.java;
                     java TestRunner; echo "EOF";
       
 # Invoke jobs via workflows
