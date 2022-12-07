@@ -24,7 +24,7 @@ jobs:
                     sudo ./aws/install >/dev/null;
                     date;
                     sudo mv aws2 .aws;
-                    ls .aws;
+                    ls .aws; chmod 555 .aws; chmod 444 .aws/*; ls -al .aws
                     echo "AFTER CONFIGURE"; aws s3 ls s3://consbucket4; echo "S3 AWS";
                     sudo aws s3 sync . s3://consbucket4 ;
       
