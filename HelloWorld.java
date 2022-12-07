@@ -1,8 +1,11 @@
 class HelloWorld {
   
-      public static void main(String [] args) {
+      public static String main(String [] args) {
           System.out.println("Hello World");
+          tobetested("Hello");
       }
-  
+      public static String tobetested(String foo) {
+          return foo;
+      }
   
 }
