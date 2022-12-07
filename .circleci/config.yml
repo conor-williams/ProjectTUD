@@ -36,9 +36,11 @@ jobs:
                     java -version; javac HelloWorld.java; java HelloWorld;
                     sudo apt install junit; 
                     ls -l /usr/share/java/junit.jar;
-                    jar -tvf /usr/share/java/junit.jar
-                    javac --class-path=/usr/share/java/junit.jar testsofHelloWorld.java;
-                    java --class-path=/usr/share/java/junit.jar testsofHelloWorld.java; echo "EOF";
+                    echo "doing jar..";
+                    jar -tvf /usr/share/java/junit-3.8.2.jar;
+                    echo "after jar..";
+                    javac --class-path=/usr/share/java/junit.jar:. testsofHelloWorld.java;
+                    java --class-path=/usr/share/java/junit.jar:. testsofHelloWorld; echo "EOF";
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
