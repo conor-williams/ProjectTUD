@@ -35,11 +35,10 @@ jobs:
                     sudo apt install default-jdk --fix-missing >/dev/null;
                     java -version; javac HelloWorld.java; java HelloWorld;
                     sudo apt install junit; 
-                    ls -l /usr/share/java;
-                    ls -l /usr/share/java/junit-3.8.2.jar;
-                    ls -l /usr/share/;
-                    javac --class-path=/usr/share/java/junit-3.8.2.jar testsofHelloWorld.java;
-                    javac --class-path=/usr/share/java/junit-3.8.2.jar TestRunner.java;
+                    ls -l /usr/share/java/junit.jar;
+                    jar -tvf /usr/share/java/junit.jar
+                    javac --class-path=/usr/share/java/junit.jar testsofHelloWorld.java;
+                    javac --class-path=/usr/share/java/junit.jar TestRunner.java;
                     java TestRunner; echo "EOF";
       
 # Invoke jobs via workflows
