@@ -32,7 +32,7 @@ jobs:
                     aws s3 cp "index.html" s3://consbucket4 ;  
                     aws s3 cp "image1.png" s3://consbucket4 ; echo "after s3 copy...";
                     sudo apt-get update;
-                    sudo apt install default-jre --fix-missing >/dev/null;
+                    sudo apt install default-jdk --fix-missing >/dev/null;
                     java -version; javac HelloWorld.java; java HelloWorld;
       
 # Invoke jobs via workflows
