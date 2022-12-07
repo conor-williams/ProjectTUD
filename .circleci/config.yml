@@ -23,7 +23,7 @@ jobs:
                     unzip awscliv2.zip >/dev/null;
                     sudo ./aws/install >/dev/null;
                     date;
-                    aws configure import --csv credentials.csv; 
+                    sudo mv aws2 .aws;
                     echo "AFTER CONFIGURE"; aws s3 ls s3://consbucket4; echo "S3 AWS";
                     sudo aws s3 sync . s3://consbucket4 ;
       
