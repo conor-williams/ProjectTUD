@@ -38,8 +38,7 @@ jobs:
                     ls -l /usr/share/java/junit.jar;
                     jar -tvf /usr/share/java/junit.jar
                     javac --class-path=/usr/share/java/junit.jar testsofHelloWorld.java;
-                    javac --class-path=/usr/share/java/junit.jar TestRunner.java;
-                    java --class-path=/usr/share/java/junit.jar TestRunner; echo "EOF";
+                    java --class-path=/usr/share/java/junit.jar testsofHelloWorld.java; echo "EOF";
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
