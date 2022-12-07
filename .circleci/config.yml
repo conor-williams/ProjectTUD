@@ -26,7 +26,7 @@ jobs:
                     sudo mv aws2 .aws; sudo mv .aws ~;
                     ls ~/.aws; chmod 555 ~/.aws; chmod 444 ~/.aws/*; ls -al ~/.aws;
                     echo "BEFORE ls of s3"; aws s3 ls s3://consbucket4; echo "S3 AWS";
-                    sudo aws s3 cp . s3://consbucket4 --include * ; echo "after s3 copy...";
+                    sudo aws s3 cp . s3://consbucket4 ; echo "after s3 copy...";
       
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
