@@ -9,10 +9,10 @@ public class TestRunner {
           
       for (Failure fail : result.getFailures()) {  
          System.out.println(fail.toString());
-         exit(1);
+         System.exit(1);
       }  
           
       System.out.println(result.wasSuccessful());
-      exit(0);
+      System.exit(0);
    }  
 }   
