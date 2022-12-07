@@ -4,8 +4,9 @@ class HelloWorld {
           System.out.println("Hello World");
           tobetested("Hello");
       }
-      public static String tobetested(String foo) {
-          return foo;
+      public static Integer tobetested(String foo) {
+          if (foo.equals("Hello")) return 1;
+          else return 0;
       }
   
 }
